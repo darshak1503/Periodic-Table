@@ -1,0 +1,2847 @@
+#include<iostream.h>
+#include<conio.h>
+#include<graphics.h>
+#include<stdio.h>
+#include<ctype.h>
+#include<process.h>
+#include<string.h>
+#include<dos.h>
+#include<fstream.h>
+
+
+
+void element(int,int);
+
+void welcome_screen()
+{
+clrscr();
+for(int x=25;x>=20;x--)
+{
+delay(160);
+gotoxy(x,12);
+cputs("  P R O J E C T   ");
+gotoxy(x,14);
+cputs("  D E V E L O P E D  B Y  :  ");
+gotoxy(x,16);
+cputs("  DARSHAK SONDAGAR AND VITAN TARPARA    ");
+}
+gotoxy(x,24);
+cputs("Press Any Key To Continue....");
+getch();
+}
+
+int i,j,g;
+
+
+void frame()
+    {
+    gotoxy(19,9);
+    cout<<" ";
+    for(i=20;i<=60;i++)
+     {
+     gotoxy(i,9);
+     cout<<"_";
+     }
+    cout<<"_";
+    gotoxy(19,16);
+    cout<<" ";
+    for(i=20;i<=60;i++)
+     {
+     gotoxy(i,16);
+     cout<<"_";
+     }
+    cout<<" ";
+    for(i=10;i<=15;i++)
+     {
+     gotoxy(19,i);
+     cout<<" ";
+     }
+    for(i=10;i<=15;i++)
+     {
+     gotoxy(61,i);
+     cout<<" ";
+     }
+    gotoxy(5,24);
+    cout<<"Press Esc to Exit";
+    }
+
+void display()
+{
+ gotoxy(33,2);
+ cout<<"PERIODIC TABLE";
+ gotoxy(1,1);
+ cout<<" ";
+ for(i=2;i<=79;i++)
+  {
+  gotoxy(i,1);
+  cout<<"_";
+  }
+ cout<<" ";
+ for(i=2;i<=23;i++)
+  {
+  gotoxy(80,i);
+  cout<<"|";
+  }
+ gotoxy(80,24);
+ cout<<"|";
+ for(i=2;i<=11;i++)
+  {
+  gotoxy(i,24);
+  cout<<"|";
+  }
+ gotoxy(1,24);
+ cout<<"|";
+ for(i=2;i<=23;i++)
+  {
+  gotoxy(1,i);
+  cout<<"|";
+  }
+ gotoxy(12,4);
+ cout<<" "<<"_"<<"_"<<" ";
+ gotoxy(63,4);
+ cout<<" "<<"_"<<"_"<<" ";
+ gotoxy(12,5);cout<<"|";
+ gotoxy(15,5);cout<<"|";
+ gotoxy(63,5);cout<<"|";
+ gotoxy(66,5);cout<<"|";
+ gotoxy(12,6);cout<<"|"<<"_"<<"_"<<"|";
+// gotoxy(48,6);cout<<" ";
+ for(i=51;i<=60;i++)
+  if(i%3==0)
+   {
+  // gotoxy(i,6);
+  // cout<<"_";
+   }
+ for(i=48;i<=66;i++)
+  if(i%3!=0)
+   {
+   gotoxy(i,6);
+   cout<<"_";
+  }
+   gotoxy(63,6);
+   cout<<"|";
+ for(i=48;i<=66;i++)
+  if(i%3==0)
+   {
+  gotoxy(i,7);
+   cout<<"|";
+   }
+ gotoxy(12,7);cout<<"|";
+ gotoxy(12,8);cout<<"|"<<"_"<<"_"<<"|";
+ gotoxy(12,9);cout<<"|";
+ gotoxy(15,9);cout<<"|";
+ gotoxy(15,6);cout<<"|"<<"_"<<"_"<<"|";
+ gotoxy(15,8);cout<<"|"<<"_"<<"_"<<"|";
+ gotoxy(18,7);cout<<"|";
+ gotoxy(18,9);cout<<"|";
+ gotoxy(48,8);cout<<"|";
+ for(i=51;i<=63;i++)
+  if(i%3==0)
+   {
+  gotoxy(i,8);
+   cout<<"|";
+   }
+ for(i=48;i<=66;i++)
+  if(i%3!=0)
+   {
+   gotoxy(i,8);
+   cout<<"_";
+   }
+ for(i=48;i<=66;i++)
+  if(i%3==0)
+   {
+   gotoxy(i,9);
+   cout<<"|";
+   }
+ gotoxy(12,10);
+ cout<<"|";
+ gotoxy(15,10);
+ cout<<"|";
+ for(i=13;i<=66;i++)
+  if(i%3!=0)
+     { 	gotoxy(i,10);
+	cout<<"_";
+
+  }
+  for(i=18;i<=45;i++)
+  if(i%3==0)
+     { //	gotoxy(i,10);
+       //	cout<<char(194);
+      }for(i=46;i<=63;i++)
+  if(i%3==0)
+     {	gotoxy(i,10);
+	cout<<"|";
+     }
+     gotoxy(18,10);
+     cout<<"|";
+for(i=12;i<=66;i++)
+ if(i%3==0)
+  for(j=10;j<=16;j++)
+   if(j%2!=0)
+    {  gotoxy(i,j);
+      cout<<"|";
+     }
+     for(i=15;i<=63;i++)
+ if(i%3==0)
+  for(j=12;j<=14;j++)
+   if(j%2==0)
+    { gotoxy(i,j);
+      cout<<"|";
+     }
+     for(i=15;i<=63;i++)
+ if(i%3==0)
+  for
+  (j=12;j<=14;j++)
+   if(j%2==0)
+    { gotoxy(i,j);
+      cout<<"|";
+     }for(i=12;i<=66;i++)
+ if(i%3==0)
+  for(j=12;j<=66;j++)
+   if(j%2==0)
+    { gotoxy(i,j);
+      cout<<"_";
+}
+for(i=15;i<=42;i++)
+ if(i%3==0)
+  {
+  gotoxy(i,16);
+    cout<<"_";
+   }
+for(i=45;i<=63;i++)
+ if(i%3==0)
+  { gotoxy(i,16);
+    cout<<"_";
+   }for(i=12;i<=42;i++)
+ if(i%3==0)
+  {  gotoxy(i,17);
+    cout<<"|";
+   } gotoxy(12,18);
+   cout<<"|";
+for(i=12;i<=42;i++)
+ if(i%3!=0)
+  {  gotoxy(i,18);
+   cout<<"_";
+  } cout<<"|";
+for(i=15;i<=40;i++)
+ if(i%3==0)
+  { gotoxy(i,18);
+   cout<<"|";
+   } for(i=6;i<=16;i++)
+ if(i%2==0)
+  {  gotoxy(12,i);
+   cout<<"|";
+  } for(i=6;i<=14;i++)
+ if(i%2==0)
+  { gotoxy(66,i);
+   cout<<"|";
+   }
+   gotoxy(66,16);
+cout<<"|";
+//gotoxy(12,20);
+//cout<<"|";
+for(i=13;i<=23;i++)
+{
+gotoxy(i,20);
+  cout<<"_";
+ }for(i=24;i<=63;i++)
+ if(i%3==0)
+{
+//gotoxy(i,20);
+  // cout<<char(194);
+  }for(i=24;i<=66;i++)
+ if(i%3!=0)
+  {// gotoxy(i,20);
+  // cout<<"_";
+  // cout<<"|";
+   // gotoxy(12,21);
+//cout<<"|";
+ }
+ for(i=24;i<=66;i++)
+{ if(i%3==0)
+  { gotoxy(i,21);
+// cout<<char(194);
+  //cout<<"|";
+   }
+}
+  for(i=24;i<=66;i++)
+{ if(i%3==0)
+  {// gotoxy(i,20);
+  // cout<<"_";
+  }//cout<<"|";
+//  gotoxy(i,21);
+//cout<<"|";
+}
+for(i=24;i<=66;i++)
+{ if(i%3==0)
+  {
+  gotoxy(i,21);
+  cout<<"|";
+}gotoxy(i,22);
+cout<<"|";
+}
+for(i=13;i<=23;i++)
+  { gotoxy(i,22);
+   cout<<"_";
+  }
+  for(i=24;i<=63;i++)
+{ if(i%3==0)
+  { gotoxy(i,22);
+   cout<<"|";
+  }
+  }
+  for(i=24;i<=66;i++)
+{ if(i%3!=0)
+  {  gotoxy(i,22);
+   cout<<"_";
+  }  cout<<"|";
+      gotoxy(12,23);
+cout<<"|";}
+for(i=24;i<=66;i++)
+  if(i%3==0)
+   {  gotoxy(i,23);
+     cout<<"|";
+  }   gotoxy(12,24);
+cout<<"|";
+for(i=13;i<=23;i++)
+  {    gotoxy(i,24);
+    cout<<"|";
+  }    for(i=24;i<=63;i++)
+ if(i%3==0)
+   {//  gotoxy(i,24);
+    // cout<<"|";
+   } for(i=24;i<=66;i++)
+  //if(i%3!=0)
+   // { gotoxy(i,24);
+    //  cout<<"_";
+   // }
+    cout<<"|";
+gotoxy(15,25);
+cout<<"ARROWS TO SCROLL.ENTER TO SELECT.ESC TO EXIT.";
+gotoxy(13,5);
+//textcolor(RED);
+cprintf("H");
+gotoxy(13,7);
+//textcolor();
+cout<<"Li";
+gotoxy(13,9);
+//textcolor(RED);
+cout<<"Na";
+gotoxy(13,11);
+cout<<"K";
+
+gotoxy(15,7); cout<<"|";
+for (i=13;i<66;i++)
+ {
+ gotoxy(i,14);cout<<"_";
+ gotoxy(i,12);cout<<"_";
+ gotoxy(i,16);cout<<"_";
+ if(i>42) {gotoxy(i,18);cout<<"  ";}
+ if(i%3==0)
+  {
+  gotoxy(i,14);cout<<"|";
+  gotoxy(i,12);cout<<"|";
+  gotoxy(i,16);cout<<"|";
+  if(i>42)
+
+   gotoxy(i,16);cout<<"|";
+  }
+ }
+
+for (i=23;i<66;i++)
+ {
+ gotoxy(i,20);cout<<"_";
+ gotoxy(i,22);cout<<"_";
+ gotoxy(i-21,24);cout<<"_";
+ gotoxy(i,24);cout<<"_";
+ if(i%3==0)
+  {
+
+  gotoxy(i,22);cout<<"|";
+  gotoxy(i,24);cout<<"|";
+  }
+ }
+ for (i=23;i<66;i++)
+ {
+ if
+ (i%3==0)
+  if(i>10)
+   {
+   gotoxy(i,24);
+   cout<<"|";
+   }
+ }
+
+for(i=67;i<=80;i++){ gotoxy(i,24); cout<<"_";}
+for(i=0;i<=10;i++) {gotoxy(i,25);cout<<" ";}
+for(i=19;i<=47;i++) {gotoxy(i,9);cout<<" ";}
+for(i=2;i<=5;i++) {gotoxy(61,i);cout<<" ";}
+
+gotoxy(12,22);cout<<"|";
+gotoxy(66,20);cout<<"| ";
+gotoxy(12,24);cout<<"|";
+gotoxy(80,24);cout<<"|";
+gotoxy(59,9);cout<<" ";
+gotoxy(56,9);cout<<" ";
+
+
+gotoxy(13,13);
+cout<<"Rb";
+gotoxy(13,15);
+cout<<"Cs";
+gotoxy(13,17);
+cout<<"Fr";
+gotoxy(16,7);
+cout<<"Be";
+gotoxy(16,9);
+cout<<"Mg";
+gotoxy(16,11);
+cout<<"Ca";
+gotoxy(16,13);
+cout<<"Sr";
+gotoxy(16,15);
+cout<<"Ba";
+gotoxy(16,17);
+cout<<"Ra";
+gotoxy(19,11);
+cout<<"Sc";
+gotoxy(19,13);
+cout<<"Y";
+gotoxy(19,15);
+cout<<"La";
+gotoxy(19,17);
+cout<<"Ac";
+gotoxy(22,11);
+cout<<"Ti";
+gotoxy(22,13);
+cout<<"Zr";
+gotoxy(22,15);
+cout<<"Hf";
+gotoxy(22,17);
+cout<<"Rf";
+gotoxy(25,11);
+cout<<"V";
+gotoxy(25,13);
+cout<<"Nb";
+gotoxy(25,15);
+cout<<"Ta";
+gotoxy(25,17);
+cout<<"Db";
+gotoxy(28,11);
+cout<<"Cr";
+gotoxy(28,13);
+cout<<"Mo";
+gotoxy(28,15);
+cout<<"W";
+gotoxy(28,17);
+cout<<"Sg";
+gotoxy(31,11);
+cout<<"Mn";
+gotoxy(31,13);
+cout<<"Tc";
+gotoxy(31,15);
+cout<<"Re";
+gotoxy(31,17);
+cout<<"Bh";
+gotoxy(34,11);
+cout<<"Fe";
+gotoxy(34,13);
+cout<<"Ru";
+gotoxy(34,15);
+cout<<"Os";
+gotoxy(34,17);
+cout<<"Hs";
+gotoxy(37,11);
+cout<<"Co";
+gotoxy(37,13);
+cout<<"Rh";
+gotoxy(37,15);
+cout<<"Ir";
+gotoxy(37,17);
+cout<<"Mt";
+gotoxy(40,11);
+cout<<"Ni";
+gotoxy(40,13);
+cout<<"Pd";
+gotoxy(40,15);
+cout<<"Pt";
+gotoxy(40,17);
+cout<<"Ds";
+gotoxy(43,11);
+cout<<"Cu";
+gotoxy(43,13);
+cout<<"Ag";
+gotoxy(43,15);
+cout<<"Au";
+gotoxy(46,11);
+cout<<"Zn";
+gotoxy(46,13);
+cout<<"Cd";
+gotoxy(46,15);
+cout<<"Hg";
+gotoxy(49,7);
+cout<<"B";
+gotoxy(49,9);
+cout<<"Al";
+gotoxy(49,11);
+cout<<"Ga";
+gotoxy(49,13);
+cout<<"In";
+gotoxy(49,15);
+cout<<"Tl";
+gotoxy(52,7);
+cout<<"C";
+gotoxy(52,9);
+cout<<"Si";
+gotoxy(52,11);
+cout<<"Ge";
+gotoxy(52,13);
+cout<<"Sn";
+gotoxy(52,15);
+cout<<"Pb";
+gotoxy(55,7);
+cout<<"N";
+gotoxy(55,9);
+cout<<"P";
+gotoxy(55,11);
+cout<<"As";
+gotoxy(55,13);
+cout<<"Sb";
+gotoxy(55,15);
+cout<<"Bi";
+gotoxy(58,7);
+cout<<"O";
+gotoxy(58,9);
+cout<<"S";
+gotoxy(58,11);
+cout<<"Se";
+gotoxy(58,13);
+cout<<"Te";
+gotoxy(58,15);
+cout<<"Po";
+gotoxy(61,7);
+cout<<"F";
+gotoxy(61,9);
+cout<<"Cl";
+gotoxy(61,11);
+cout<<"Br";
+gotoxy(61,13);
+cout<<"I";
+gotoxy(61,15);
+cout<<"At";
+gotoxy(64,5);
+cout<<"He";
+gotoxy(64,7);
+cout<<"Ne";
+gotoxy(64,9);
+cout<<"Ar";
+gotoxy(64,11);
+cout<<"Kr";
+gotoxy(64,13);
+cout<<"Xe";
+gotoxy(64,15);
+cout<<"Rn";
+gotoxy(13,21);
+cout<<"Lanthanides:  ";
+gotoxy(25,21);
+cout<<"Ce";
+gotoxy(28,21);
+cout<<"Pr";
+gotoxy(31,21);
+cout<<"Nd";
+gotoxy(34,21);
+cout<<"Pm";
+gotoxy(37,21);
+cout<<"Sm";
+gotoxy(40,21);
+cout<<"Eu";
+gotoxy(43,21);
+cout<<"Gd";
+gotoxy(46,21);
+cout<<"Tb";
+gotoxy(49,21);
+cout<<"Dy";
+gotoxy(52,21);
+cout<<"Ho";
+gotoxy(55,21);
+cout<<"Er";
+gotoxy(58,21);
+cout<<"Tm";
+gotoxy(61,21);
+cout<<"Yb";
+gotoxy(64,21);
+cout<<"Lu";
+gotoxy(13,23);
+cout<<"Actinides:  ";
+gotoxy(25,23);
+cout<<"Th";
+gotoxy(28,23);
+cout<<"Pa";
+gotoxy(31,23);
+cout<<"U";
+gotoxy(34,23);
+cout<<"Np";
+gotoxy(37,23);
+cout<<"Pu";
+gotoxy(40,23);
+cout<<"Am";
+gotoxy(43,23);
+cout<<"Cm";
+gotoxy(46,23);
+cout<<"Bk";
+gotoxy(49,23);
+cout<<"Cf";
+gotoxy(52,23);
+cout<<"Ea";
+gotoxy(55,23);
+cout<<"Fm";
+gotoxy(58,23);
+cout<<"Md";
+gotoxy(61,23);
+cout<<"No";
+gotoxy(64,23);
+cout<<"Lr";
+gotoxy(2,2);
+i=2;j=2;
+gotoxy(i,j);
+
+ do
+  {
+  g=getch();
+  if(g==80)
+   {
+   if(j==23) j=1;
+   gotoxy(i,++j);
+   }
+  else if(g==77)
+   {
+   if(i==79) i=1;
+   gotoxy(++i,j);
+   }
+  else if(g==75)
+   {
+   if(i==2) i=80;
+   gotoxy(--i,j);
+   }
+  else if(g==72)
+   {
+   if(j==2)
+   j=24;
+   gotoxy(i,--j);
+   }
+  if(g==13)
+   element(i,j);
+  }while(g!=27);
+
+}
+
+void main()
+ {
+ clrscr();
+ welcome_screen();
+ int gdriver=DETECT,gmode,errorcode;
+ initgraph(&gdriver,&gmode,"c:\\turboc3\\bgi");
+ errorcode=graphresult();
+ if(errorcode!=grOk)
+  {
+  cout<<grapherrormsg(errorcode)<<endl;
+  getch();
+  }
+ for (int i=0;i<7;i++)
+  {
+  delay(100);
+  clrscr();
+  settextstyle(3,0,i);
+  outtextxy(110,75,"    WELCOME");
+  outtextxy(155,150,"     TO   ");
+  outtextxy(100,225," PERIODIC TABLE");
+  }
+ settextstyle(8,0,1);
+ outtextxy(200,450,"Press Any Key To Continue ...");
+ getch();
+ closegraph();
+ display();
+
+ }
+
+void element(int i,int j)
+ {
+ if(((i==13)||(i==14))&&(j==5))
+     {
+     clrscr();
+      frame();
+      gotoxy(21,10);
+      cout<<"Atomic No                :1"<<"\n";
+      gotoxy(21,11);
+      cout<<"Symbol                   :H"<<"\n";
+      gotoxy(21,12);
+      cout<<"Name                     :Hydrogen"<<"\n";
+      gotoxy(21,13);
+      cout<<"Atomic weight            :1.008"<<"\n";
+      gotoxy(21,14);
+      cout<<"Atomic structure         :1s1"<<"\n";
+      gotoxy(21,15);
+      cout<<"Electronegetivity        :2.20"<<"\n";
+      gotoxy(30,20);
+      cout<<"Press Any Key To Return.....";
+     }
+
+ else if(((i==64)||(i==65))&&(j==5))
+	{
+	 clrscr();
+	 frame();
+	 gotoxy(21,10);
+	 cout<<"Atomic No:               :2"<<"\n";
+	 gotoxy(21,11);
+	 cout<<"Symbol                   :He"<<"\n";
+	 gotoxy(21,12);
+	 cout<<"Name                     :Helium"<<"\n";
+	 gotoxy(21,13);
+	 cout<<"Atomic weight            :4.002602"<<"\n";
+	 gotoxy(21,14);
+	 cout<<"Atomic structure         :1s2"<<"\n";
+	 gotoxy(21,15);
+	 cout<<"Electronegativity        :0.0"<<"\n";
+	 gotoxy(30,20);
+	 cout<<"Press Any Key To Return......";
+	}
+
+ else if(((i==13)||(i==14))&&(j==7))
+       {
+	clrscr();
+	 frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :3"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Li"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Lithium"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :6.94"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[He] 2s1"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :0.98"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+ else if(((i==16)||(i==17))&&(j==7))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :4"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Be"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Berryllium"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :9.012182"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[He] 2s2"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :1.57"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+ else if(((i==49)||(i==50))&&(j==7))
+	{
+	 clrscr();
+	 frame();
+	 gotoxy(21,10);
+	 cout<<"Atomic No:               :5"<<"\n";
+	 gotoxy(21,11);
+	 cout<<"Symbol                   :B"<<"\n";
+	 gotoxy(21,12);
+	 cout<<"Name                     :Boron"<<"\n";
+	 gotoxy(21,13);
+	 cout<<"Atomic weight            :10.81"<<"\n";
+	 gotoxy(21,14);
+	 cout<<"Atomic structure         :[He] 2s2 2p1"<<"\n";
+	 gotoxy(21,15);
+	 cout<<"Electronegativity        :2.04"<<"\n";
+	 gotoxy(30,20);
+	 cout<<"Press Any Key To Return......";
+	}
+
+ else if(((i==52)||(i==53))&&(j==7))
+	{
+	 clrscr();
+	 frame();
+	 gotoxy(21,10);
+	 cout<<"Atomic No:               :6"<<"\n";
+	 gotoxy(21,11);
+	 cout<<"Symbol                   :C"<<"\n";
+	 gotoxy(21,12);
+	 cout<<"Name                     :Carbon"<<"\n";
+	 gotoxy(21,13);
+	 cout<<"Atomic weight            :12.011"<<"\n";
+	 gotoxy(21,14);
+	 cout<<"Atomic structure         :[He] 2s2 2p2"<<"\n";
+	 gotoxy(21,15);
+	 cout<<"Electronegativity        :2.55"<<"\n";
+	 gotoxy(30,20);
+	 cout<<"Press Any Key To Return......";
+	}
+
+ else if(((i==55)||(i==56))&&(j==7))
+	{
+	 clrscr();
+	 frame();
+	 gotoxy(21,10);
+	 cout<<"Atomic No:               :7"<<"\n";
+	 gotoxy(21,11);
+	 cout<<"Symbol                   :N"<<"\n";
+	 gotoxy(21,12);
+	 cout<<"Name                     :Nitrogen"<<"\n";
+	 gotoxy(21,13);
+	 cout<<"Atomic weight            :14.007"<<"\n";
+	 gotoxy(21,14);
+	 cout<<"Atomic structure         :[He] 2s2 2p3"<<"\n";
+	 gotoxy(21,15);
+	 cout<<"Electronegativity        :3.04"<<"\n";
+	 gotoxy(30,20);
+	 cout<<"Press Any Key To Return......";
+	}
+
+ else if(((i==58)||(i==59))&&(j==7))
+	{
+	 clrscr();
+	 frame();
+	 gotoxy(21,10);
+	 cout<<"Atomic No:               :8"<<"\n";
+	 gotoxy(21,11);
+	 cout<<"Symbol                   :O"<<"\n";
+	 gotoxy(21,12);
+	 cout<<"Name                     :Oxygen"<<"\n";
+	 gotoxy(21,13);
+	 cout<<"Atomic weight            :15.999"<<"\n";
+	 gotoxy(21,14);
+	 cout<<"Atomic structure         :[He] 2s2 2p4"<<"\n";
+	 gotoxy(21,15);
+	 cout<<"Electronegativity        :3.44"<<"\n";
+	 gotoxy(30,20);
+	 cout<<"Press Any Key To Return......";
+	}
+
+ else if(((i==61)||(i==62))&&(j==7))
+	{
+	 clrscr();
+	 frame();
+	 gotoxy(21,10);
+	 cout<<"Atomic No:               :9"<<"\n";
+	 gotoxy(21,11);
+	 cout<<"Symbol                   :F"<<"\n";
+	 gotoxy(21,12);
+	 cout<<"Name                     :Fluorine"<<"\n";
+	 gotoxy(21,13);
+	 cout<<"Atomic weight            :18.9984032"<<"\n";
+	 gotoxy(21,14);
+	 cout<<"Atomic structure         :[He] 2s2 2p5"<<"\n";
+	 gotoxy(21,15);
+	 cout<<"Electronegativity        :3.98"<<"\n";
+	 gotoxy(30,20);
+	 cout<<"Press Any Key To Return......";
+	}
+
+ else if(((i==64)||(i==65))&&(j==7))
+	{
+	 clrscr();
+	 frame();
+	 gotoxy(21,10);
+	 cout<<"Atomic No:               :10"<<"\n";
+	 gotoxy(21,11);
+	 cout<<"Symbol                   :Ne"<<"\n";
+	 gotoxy(21,12);
+	 cout<<"Name                     :Neon"<<"\n";
+	 gotoxy(21,13);
+	 cout<<"Atomic weight            :20.1797"<<"\n";
+	 gotoxy(21,14);
+	 cout<<"Atomic structure         :[He] 2s2 2p6"<<"\n";
+	 gotoxy(21,15);
+	 cout<<"Electronegativity        :0.0"<<"\n";
+	 gotoxy(30,20);
+	 cout<<"Press Any Key To Return......";
+	}
+
+ else if(((i==13)||(i==14))&&(j==9))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :11"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Na"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Sodium"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :22.98"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Ne]3s1"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :0.93"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+ else if(((i==16)||(i==17))&&(j==9))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :12"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Mg"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name       	        :Magnesium"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :24.305"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Ne]3s2"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electonegativity         :1.31"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return.....   ";
+     }
+
+ else if(((i==49)||(i==50))&&(j==9))
+	{
+	 clrscr();
+	 frame();
+	 gotoxy(21,10);
+	 cout<<"Atomic No:               :13"<<"\n";
+	 gotoxy(21,11);
+	 cout<<"Symbol                   :Al"<<"\n";
+	 gotoxy(21,12);
+	 cout<<"Name                     :Aluminium"<<"\n";
+	 gotoxy(21,13);
+	 cout<<"Atomic weight            :26.98"<<"\n";
+	 gotoxy(21,14);
+	 cout<<"Atomic structure         :[Ne]3s2 3p1"<<"\n";
+	 gotoxy(21,15);
+	 cout<<"Electronegativity        :1.61"<<"\n";
+	 gotoxy(30,20);
+	 cout<<"Press Any Key To Return......";
+	}
+
+ else if(((i==52)||(i==53))&&(j==9))
+	{
+	 clrscr();
+	 frame();
+	 gotoxy(21,10);
+	 cout<<"Atomic No:               :14"<<"\n";
+	 gotoxy(21,11);
+	 cout<<"Symbol                   :Si"<<"\n";
+	 gotoxy(21,12);
+	 cout<<"Name                     :Silicon"<<"\n";
+	 gotoxy(21,13);
+	 cout<<"Atomic weight            :28.085"<<"\n";
+	 gotoxy(21,14);
+	 cout<<"Atomic structure         :[Ne]3s2 3p2"<<"\n";
+	 gotoxy(21,15);
+	 cout<<"Electronegativity        :1.90"<<"\n";
+	 gotoxy(30,20);
+	 cout<<"Press Any Key To Return......";
+	}
+
+ else if(((i==55)||(i==56))&&(j==9))
+	{
+	 clrscr();
+	 frame();
+	 gotoxy(21,10);
+	 cout<<"Atomic No:               :15"<<"\n";
+	 gotoxy(21,11);
+	 cout<<"Symbol                   :P"<<"\n";
+	 gotoxy(21,12);
+	 cout<<"Name                     :Phosphorus"<<"\n";
+	 gotoxy(21,13);
+	 cout<<"Atomic weight            :30.97"<<"\n";
+	 gotoxy(21,14);
+	 cout<<"Atomic structure         :[Ne]3s2 3p3"<<"\n";
+	 gotoxy(21,15);
+	 cout<<"Electronegativity        :2.19"<<"\n";
+	 gotoxy(30,20);
+	 cout<<"Press Any Key To Return......";
+	}
+
+ else if(((i==58)||(i==59))&&(j==9))
+	{
+	 clrscr();
+	 frame();
+	 gotoxy(21,10);
+	 cout<<"Atomic No:               :16"<<"\n";
+	 gotoxy(21,11);
+	 cout<<"Symbol                   :S"<<"\n";
+	 gotoxy(21,12);
+	 cout<<"Name                     :Sulphur"<<"\n";
+	 gotoxy(21,13);
+	 cout<<"Atomic weight            :32.06"<<"\n";
+	 gotoxy(21,14);
+	 cout<<"Atomic structure         :[Ne]3s2 3p4"<<"\n";
+	 gotoxy(21,15);
+	 cout<<"Electronegativity        :2.58"<<"\n";
+	 gotoxy(30,20);
+	 cout<<"Press Any Key To Return......";
+	}
+
+
+
+ else  if(((i==61)||(i==62))&&(j==9))
+	{
+	 clrscr();
+	 frame();
+	 gotoxy(21,10);
+	 cout<<"Atomic No:               :17"<<"\n";
+	 gotoxy(21,11);
+	 cout<<"Symbol                   :Cl"<<"\n";
+	 gotoxy(21,12);
+	 cout<<"Name                     :Chlorine"<<"\n";
+	 gotoxy(21,13);
+	 cout<<"Atomic weight            :35.45"<<"\n";
+	 gotoxy(21,14);
+	 cout<<"Atomic structure         :[Ne]3s2 3p5"<<"\n";
+	 gotoxy(21,15);
+	 cout<<"Electronegativity        :3.16"<<"\n";
+	 gotoxy(30,20);
+	 cout<<"Press Any Key To Return......";
+	}
+
+
+
+ else if(((i==64)||(i==65))&&(j==9))
+	{
+	 clrscr();
+	  frame();
+	 gotoxy(21,10);
+	 cout<<"Atomic No:               :18"<<"\n";
+	 gotoxy(21,11);
+	 cout<<"Symbol                   :Ar"<<"\n";
+	 gotoxy(21,12);
+	 cout<<"Name                     :Argon"<<"\n";
+	 gotoxy(21,13);
+	 cout<<"Atomic weight            :39.948"<<"\n";
+	 gotoxy(21,14);
+	 cout<<"Atomic structure         :[Ne]3s2 3p6"<<"\n";
+	 gotoxy(21,15);
+	 cout<<"Electronegativity        :0.0"<<"\n";
+	 gotoxy(30,20);
+	 cout<<"Press Any Key To Return......";
+	}
+
+ else if(((i==13)||(i==14))&&(j==11))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :19"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :K"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Potassium"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :39..983"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Ar]4s1"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :0.82"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+ else if(((i==16)||(i==17))&&(j==11))
+	{
+	 clrscr();
+	 frame();
+	 gotoxy(21,10);
+	 cout<<"Atomic No               :20"<<"\n";
+	 gotoxy(21,11);
+	 cout<<"Symbol                  :ca"<<"\n";
+	 gotoxy(21,12);
+	 cout<<"Name       	        :Calcium"<<"\n";
+	 gotoxy(21,13);
+	 cout<<"Atomic weight           :40.078"<<"\n";
+	 gotoxy(21,14);
+	 cout<<"Atomic structure        :[Ar]4s2"<<"\n";
+	 gotoxy(21,15);
+	 cout<<"Electonegativity        :1.00"<<"\n";
+	 gotoxy(30,20);
+	 cout<<"Press Any Key To Return.....   ";
+    }
+
+else if(((i==13)||(i==14))&&(j==11))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :21"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Sc"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Scandium "<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :44.95"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Ar] 3d1 4s2"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :1.36"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+else if(((i==19)||(i==20))&&(j==11))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :22"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Sc"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Scandium "<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :47.867"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Ar] 3d2 4s2"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :1.54"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+else if(((i==25)||(i==26))&&(j==11))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :23"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :V"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Vanadium "<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :50.94"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Ar] 3d3 4s2"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :1.63"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+else if(((i==28)||(i==29))&&(j==11))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :24"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Cr"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Chromium "<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :51.99"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Ar] 3d5 4s1"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :1.66"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+else if(((i==31)||(i==32))&&(j==11))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :25"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Mn"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Manganese"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :54.93"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Ar] 3d5 4s2"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :1.55"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+else if(((i==34)||(i==35))&&(j==11))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :26"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Fe"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Iron"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :55.84"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Ar] 3d6 4s2"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :1.83"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+else if(((i==37)||(i==38))&&(j==11))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :27"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Co"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Cobalt"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :58.93"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Ar] 3d7 4s2"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :1.88"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+else if(((i==40)||(i==41))&&(j==11))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :28"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Ni"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Nickel"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :58.69"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Ar] 3d8 4s2"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :1.91"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+else if(((i==43)||(i==44))&&(j==11))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :29"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Cu"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Copper"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :63.546"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Ar] 3d10 4s1"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :1.90"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+else if(((i==46)||(i==47))&&(j==11))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :30"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Zn"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Zinc"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :65.38"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Ar] 3d10 4s2"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :1.65"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+else if(((i==49)||(i==50))&&(j==11))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :31"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Ga"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Gallium"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :69.723"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Ar] 3d10 4s2 4p1"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :1.81"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+else if(((i==52)||(i==53))&&(j==11))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :32"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Ge"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Germanium"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :72.630"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Ar] 3d10 4s2 4p2"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :20.1"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+else if(((i==55)||(i==56))&&(j==11))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :33"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :As"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Arsenic"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :74.92"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Ar] 3d10 4s2 4p3"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :2.18"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+else if(((i==58)||(i==59))&&(j==11))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :34"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Se"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Selenium"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :78.96"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Ar] 3d10 4s2 4p4"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :2.55"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+else if(((i==61)||(i==62))&&(j==11))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :35"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Br"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Bromine"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :79.904"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Ar] 3d10 4s2 4p5"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :2.96"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+else if(((i==64)||(i==65))&&(j==11))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :36"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Kr"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Krypton"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :83.798"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Ar] 3d10 4s2 4p6"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :3.00"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+else if(((i==13)||(i==14))&&(j==13))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :37"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Rb"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Rubidium"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :85.4678"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Kr] 5s1"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :0.82"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+else if(((i==16)||(i==17))&&(j==13))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :38"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Sr"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Strontium"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :87.62"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Kr] 5s2"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :0.95"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+else if(((i==19)||(i==20))&&(j==13))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :39"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Y"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Yttrium"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :88.90585"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Kr] 4d1 5s2"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :1.22"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+else if(((i==22)||(i==23))&&(j==13))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :40"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Zr"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Zirconium"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :91.224"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Kr] 4d2 5s2"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :1.33"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+else if(((i==25)||(i==26))&&(j==13))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :41"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Nb"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Niobium"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :92.90638"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Kr] 4d4 5s1"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :1.6"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+else if(((i==28)||(i==29))&&(j==13))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :42"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Mo"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Molybdenum"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :95.96"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Kr] 4d5 5s1"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :2.16"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+else if(((i==31)||(i==32))&&(j==13))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :43"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Tc"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Technetium"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :98"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Kr] 4d5 5s2"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :1.9"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+else if(((i==34)||(i==35))&&(j==13))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :44"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Ru"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Ruthenium"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :101.07"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Kr] 4d7 5s1"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :2.2"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+else if(((i==37)||(i==38))&&(j==13))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :45"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Rh"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Rhodium"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :102.90550"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Kr] 4d8 5s1"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :2.28"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+else if(((i==40)||(i==41))&&(j==13))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :46"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Pd"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Palladium"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :106.42"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Kr] 4d10"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :2.20"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+else if(((i==43)||(i==44))&&(j==13))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :47"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Ag"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Silver"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :107.8682"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Kr] 4d10 5s1"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :1.93"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+else if(((i==46)||(i==47))&&(j==13))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :48"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Cd"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Cadmium"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :112.411"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Kr] 4d10 5s2"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :1.69"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+else if(((i==49)||(i==50))&&(j==13))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :49"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :In"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Indium"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :114.818"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Kr] 4d10 5s2 5p1"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :1.78"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+else if(((i==52)||(i==53))&&(j==13))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :50"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Sn"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Tin"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :118.710"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Kr] 4d10 5s2 5p2"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :1.96"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+else if(((i==55)||(i==56))&&(j==13))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :51"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Sb"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Antimony"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :121.760"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Kr] 4d10 5s2 5p3"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :2.05"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+else if(((i==58)||(i==59))&&(j==13))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :52"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Te"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Tellurium"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :127.60"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Kr] 4d10 5s2 5p4"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :2.1"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+else if(((i==61)||(i==62))&&(j==13))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :53"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :I"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Iodine"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :126.90447"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Kr] 4d10 5s2 5p5"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :2.66"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+else if(((i==64)||(i==65))&&(j==13))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :54"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Xe"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Xenon"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :131.293"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Kr] 4d10 5s2 5p6"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :2.6"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+else if(((i==13)||(i==14))&&(j==15))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :55"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Cs"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Caesium"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :132.9054519"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Xe] 6s1"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :0.79"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+else if(((i==16)||(i==17))&&(j==15))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :56"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Ba"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Barium"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :137.327"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Xe] 6s2"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :0.89"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+else if(((i==19)||(i==20))&&(j==15))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :57"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :La"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Lanthanum"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :138.90547"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Xe] 5d1 6s2"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :1.10"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+else if(((i==25)||(i==26))&&(j==21))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :58"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Ce"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Cerium"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :140.90765"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Xe] 4f1 5d1 6s2"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :1.12"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+else if(((i==28)||(i==29))&&(j==21))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :59"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Pr"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Praseodymium"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :140.90767"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Xe] 4f3 6s2"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :1.13"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+else if(((i==31)||(i==32))&&(j==21))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :60"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Nd"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Neodymium"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :144.242"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Xe] 4f4 6s2"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :1.14"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+  if(((i==34)||(i==35))&&(j==21))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :61"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Pm"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Promethium"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :145"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Xe] 4f5 6s2"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :0.0"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+ if(((i==37)||(i==38))&&(j==21))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :62"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Sm"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Samarium"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :150.36"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Xe] 4f6 6s2"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :1.17"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+ if(((i==40)||(i==41))&&(j==21))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :63"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Eu"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Europium"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :151.964"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Xe] 4f7 6s2"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :0.0"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+ if(((i==43)||(i==44))&&(j==21))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :64"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Gd"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Gadolinium"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :157.25"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Xe] 4f7 5d1 6s2"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :1.20"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+
+ if(((i==46)||(i==47))&&(j==21))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :65"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Tb"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Terbium"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :158.92535"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Xe] 4f9 6s2"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :0.0"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+ if(((i==49)||(i==50))&&(j==21))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :66"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Dy"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Dysprosium"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :162.500"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Xe] 4f10 6s2"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :1.22"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+ if(((i==52)||(i==53))&&(j==21))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :67"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Ho"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Holmium"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :164.93032"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Xe] 4f11 6s2"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :1.23"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+ if(((i==55)||(i==56))&&(j==21))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :68"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Er"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Erbium"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :167.259"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Xe] 4f12 6s2"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :1.24"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+ if(((i==58)||(i==59))&&(j==21))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :69"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Tm"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Thulium"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :168.93421"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Xe] 4f13 6s2"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :1.25"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+ if(((i==61)||(i==62))&&(j==21))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :70"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Yb"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Ytterbium"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :173.054"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Xe] 4f14 6s2"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :0.0"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+ if(((i==64)||(i==65))&&(j==21))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :71"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Lu"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Lutetium"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :174.9668"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Xe] 4f14 5d1 6s2"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :1.27"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+ if(((i==22)||(i==23))&&(j==15))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :72"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Hf"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Hafnium"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :178.49"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Xe] 4f14 5d2 6s2"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :1.3"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+ if(((i==25)||(i==26))&&(j==15))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :73"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Ta"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Tantalum"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :180.94788"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Xe] 4f14 5d3 6s2"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :1.5"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+ if(((i==28)||(i==29))&&(j==15))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :74"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :W"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Tungsten"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :183.84"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Xe] 4f14 5d4 6s2"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :2.36"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+ if(((i==31)||(i==32))&&(j==15))
+       {
+	clrscr();
+	frame();
+	gotoxy(21,10);
+	cout<<"Atomic No:               :75"<<"\n";
+	gotoxy(21,11);
+	cout<<"Symbol                   :Re"<<"\n";
+	gotoxy(21,12);
+	cout<<"Name                     :Rhenium"<<"\n";
+	gotoxy(21,13);
+	cout<<"Atomic weight            :186.207"<<"\n";
+	gotoxy(21,14);
+	cout<<"Atomic structure         :[Xe] 4f14 5d5 6s2"<<"\n";
+	gotoxy(21,15);
+	cout<<"Electronegativity        :1.9"<<"\n";
+	gotoxy(30,20);
+	cout<<"Press Any Key To Return......";
+	}
+
+if(((i==34)||(i==35))&&(j==15))
+{
+ clrscr();
+       frame();
+       gotoxy(21,10);
+       cout<<"Atomic No.              :76"<<"\n";
+       gotoxy(21,11);
+       cout<<"Symbol                  :Os"<<"\n";
+       gotoxy(21,12);
+       cout<<"Name                    :Osmium"<<" \n";
+       gotoxy(21,13);
+       cout<<"Atomic weight           :190.23"<<"\n";
+       gotoxy(21,14);
+       cout<<"Atomic structure        :[Xe] 4f14 5d6 6s2"<<"\n";
+       gotoxy(21,15);
+       cout<<"Electonegativity        :2.2"<<"\n";
+       gotoxy(30,20);
+       cout<<"Press Any Key To Return.....";
+}
+if(((i==37)||(i==38))&&(j==15))
+{
+ clrscr();
+       frame();
+       gotoxy(21,10);
+       cout<<"Atomic No.              :77"<<"\n";
+       gotoxy(21,11);
+       cout<<"Symbol                  :Ir"<<"\n";
+       gotoxy(21,12);
+       cout<<"Name                    :Iridium"<<" \n";
+       gotoxy(21,13);
+       cout<<"Atomic weight           :192.217"<<"\n";
+       gotoxy(21,14);
+       cout<<"Atomic structure        :[Xe] 4f14 5d7 6s2"<<"\n";
+       gotoxy(21,15);
+       cout<<"Electonegativity        :2.20"<<"\n";
+       gotoxy(30,20);
+       cout<<"Press Any Key To Return.....";
+}
+if(((i==40)||(i==41))&&(j==15))
+{
+ clrscr();
+       frame();
+       gotoxy(21,10);
+       cout<<"Atomic No.              :78"<<"\n";
+       gotoxy(21,11);
+       cout<<"Symbol                  :Pt"<<"\n";
+       gotoxy(21,12);
+       cout<<"Name                    :Platinum"<<" \n";
+       gotoxy(21,13);
+       cout<<"Atomic weight           :195.084"<<"\n";
+       gotoxy(21,14);
+       cout<<"Atomic structure        :[Xe] 4f14 5d7 6s2"<<"\n";
+       gotoxy(21,15);
+       cout<<"Electonegativity        :2.28"<<"\n";
+       gotoxy(30,20);
+       cout<<"Press Any Key To Return.....";
+}
+if(((i==43)||(i==44))&&(j==15))
+{
+ clrscr();
+       frame();
+       gotoxy(21,10);
+       cout<<"Atomic No.              :79"<<"\n";
+       gotoxy(21,11);
+       cout<<"Symbol                  :Au"<<"\n";
+       gotoxy(21,12);
+       cout<<"Name                    :Gold"<<" \n";
+       gotoxy(21,13);
+       cout<<"Atomic weight           :196.966"<<"\n";
+       gotoxy(21,14);
+       cout<<"Atomic structure        :[Xe] 4f14 5d10 6s1"<<"\n";
+       gotoxy(21,15);
+       cout<<"Electonegativity        :2.54"<<"\n";
+       gotoxy(30,20);
+       cout<<"Press Any Key To Return.....";
+}
+if(((i==46)||(i==47))&&(j==15))
+{
+ clrscr();
+       frame();
+       gotoxy(21,10);
+       cout<<"Atomic No.              :80"<<"\n";
+       gotoxy(21,11);
+       cout<<"Symbol                  :Hg"<<"\n";
+       gotoxy(21,12);
+       cout<<"Name                    :Mercury"<<" \n";
+       gotoxy(21,13);
+       cout<<"Atomic weight           :200.592"<<"\n";
+       gotoxy(21,14);
+       cout<<"Atomic structure        :[Xe] 4f14 5d10 6s2"<<"\n";
+       gotoxy(21,15);
+       cout<<"Electonegativity        :2.00"<<"\n";
+       gotoxy(30,20);
+       cout<<"Press Any Key To Return.....";
+}
+if(((i==49)||(i==50))&&(j==15))
+{
+ clrscr();
+       frame();
+       gotoxy(21,10);
+       cout<<"Atomic No.              :81"<<"\n";
+       gotoxy(21,11);
+       cout<<"Symbol                  :Tl"<<"\n";
+       gotoxy(21,12);
+       cout<<"Name                    :Thallium"<<" \n";
+       gotoxy(21,13);
+       cout<<"Atomic weight           :204.38"<<"\n";
+       gotoxy(21,14);
+       cout<<"Atomic structure        :[Xe] 4f14 5d10 6s2 6p1"<<"\n";
+       gotoxy(21,15);
+       cout<<"Electonegativity        :1.62"<<"\n";
+       gotoxy(30,20);
+       cout<<"Press Any Key To Return.....";
+}
+if(((i==52)||(i==53))&&(j==15))
+{
+ clrscr();
+       frame();
+       gotoxy(21,10);
+       cout<<"Atomic No.              :82"<<"\n";
+       gotoxy(21,11);
+       cout<<"Symbol                  :Pb"<<"\n";
+       gotoxy(21,12);
+       cout<<"Name                    :Lead"<<" \n";
+       gotoxy(21,13);
+       cout<<"Atomic weight           :207.2"<<"\n";
+       gotoxy(21,14);
+       cout<<"Atomic structure        :[Xe] 4f14 5d10 6s2 6p2"<<"\n";
+       gotoxy(21,15);
+       cout<<"Electonegativity        :2.33"<<"\n";
+       gotoxy(30,20);
+       cout<<"Press Any Key To Return.....";
+}
+if(((i==55)||(i==56))&&(j==15))
+{
+ clrscr();
+       frame();
+       gotoxy(21,10);
+       cout<<"Atomic No.              :83"<<"\n";
+       gotoxy(21,11);
+       cout<<"Symbol                  :Bi"<<"\n";
+       gotoxy(21,12);
+       cout<<"Name                    :Bismuth"<<" \n";
+       gotoxy(21,13);
+       cout<<"Atomic weight           :208.98"<<"\n";
+       gotoxy(21,14);
+       cout<<"Atomic structure        :[Xe] 4f14 5d10 6s2 6p3"<<"\n";
+       gotoxy(21,15);
+       cout<<"Electonegativity        :2.02"<<"\n";
+       gotoxy(30,20);
+       cout<<"Press Any Key To Return.....";
+}
+if(((i==58)||(i==59))&&(j==15))
+{
+ clrscr();
+       frame();
+       gotoxy(21,10);
+       cout<<"Atomic No.              :84"<<"\n";
+       gotoxy(21,11);
+       cout<<"Symbol                  :Po"<<"\n";
+       gotoxy(21,12);
+       cout<<"Name                    :Polonium"<<" \n";
+       gotoxy(21,13);
+       cout<<"Atomic weight           :209"<<"\n";
+       gotoxy(21,14);
+       cout<<"Atomic structure        :[Xe] 4f14 5d10 6s2 6p4"<<"\n";
+       gotoxy(21,15);
+       cout<<"Electonegativity        :2.02"<<"\n";
+       gotoxy(30,20);
+       cout<<"Press Any Key To Return.....";
+}
+if(((i==61)||(i==62))&&(j==15))
+{
+ clrscr();
+       frame();
+       gotoxy(21,10);
+       cout<<"Atomic No.              :85"<<"\n";
+       gotoxy(21,11);
+       cout<<"Symbol                  :At"<<"\n";
+       gotoxy(21,12);
+       cout<<"Name                    :Astatine"<<" \n";
+       gotoxy(21,13);
+       cout<<"Atomic weight           :210"<<"\n";
+       gotoxy(21,14);
+       cout<<"Atomic structure        :[Xe] 4f14 5d10 6s2 6p5"<<"\n";
+       gotoxy(21,15);
+       cout<<"Electonegativity        :2.2"<<"\n";
+       gotoxy(30,20);
+       cout<<"Press Any Key To Return.....";
+}
+if(((i==64)||(i==65))&&(j==15))
+{
+ clrscr();
+       frame();
+       gotoxy(21,10);
+       cout<<"Atomic No.              :86"<<"\n";
+       gotoxy(21,11);
+       cout<<"Symbol                  :Rn"<<"\n";
+       gotoxy(21,12);
+       cout<<"Name                    :Random"<<" \n";
+       gotoxy(21,13);
+       cout<<"Atomic weight           :222"<<"\n";
+       gotoxy(21,14);
+       cout<<"Atomic structure        :[Xe] 4f14 5d10 6s2 6p6"<<"\n";
+       gotoxy(21,15);
+       cout<<"Electonegativity        :0"<<"\n";
+       gotoxy(30,20);
+       cout<<"Press Any Key To Return.....";
+
+}
+if(((i==13)||(i==14))&&(j==17))
+{
+ clrscr();
+       frame();
+       gotoxy(21,10);
+       cout<<"Atomic No.              :87"<<"\n";
+       gotoxy(21,11);
+       cout<<"Symbol                  :Fr"<<"\n";
+       gotoxy(21,12);
+       cout<<"Name                    :Francium"<<" \n";
+       gotoxy(21,13);
+       cout<<"Atomic weight           :223"<<"\n";
+       gotoxy(21,14);
+       cout<<"Atomic structure        :[Rn] 7s1"<<"\n";
+       gotoxy(21,15);
+       cout<<"Electonegativity        :0.7"<<"\n";
+       gotoxy(30,20);
+       cout<<"Press Any Key To Return.....";
+}
+if(((i==16)||(i==17))&&(j==17))
+{
+ clrscr();
+       frame();
+       gotoxy(21,10);
+       cout<<"Atomic No.              :88"<<"\n";
+       gotoxy(21,11);
+       cout<<"Symbol                  :Ra"<<"\n";
+       gotoxy(21,12);
+       cout<<"Name                    :Radium"<<" \n";
+       gotoxy(21,13);
+       cout<<"Atomic weight           :226"<<"\n";
+       gotoxy(21,14);
+       cout<<"Atomic structure        :[Rn] 7s2"<<"\n";
+       gotoxy(21,15);
+       cout<<"Electonegativity        :0.9"<<"\n";
+       gotoxy(30,20);
+       cout<<"Press Any Key To Return.....";
+}
+
+if(((i==19)||(i==20))&&(j==17))
+{
+ clrscr();
+       frame();
+       gotoxy(21,10);
+       cout<<"Atomic No.              :89"<<"\n";
+       gotoxy(21,11);
+       cout<<"Symbol                  :Ac"<<"\n";
+       gotoxy(21,12);
+       cout<<"Name                    :Actinium"<<" \n";
+       gotoxy(21,13);
+       cout<<"Atomic weight           :227"<<"\n";
+       gotoxy(21,14);
+       cout<<"Atomic structure        :[Rn] 6d1 7s2"<<"\n";
+       gotoxy(21,15);
+       cout<<"Electonegativity        :1.1"<<"\n";
+       gotoxy(30,20);
+       cout<<"Press Any Key To Return.....";
+}
+if(((i==25)||(i==26))&&(j==23))
+{
+ clrscr();
+       frame();
+       gotoxy(21,10);
+       cout<<"Atomic No.              :90"<<"\n";
+       gotoxy(21,11);
+       cout<<"Symbol                  :Th"<<"\n";
+       gotoxy(21,12);
+       cout<<"Name                    :Thorium"<<" \n";
+       gotoxy(21,13);
+       cout<<"Atomic weight           :232.03"<<"\n";
+       gotoxy(21,14);
+       cout<<"Atomic structure        :[Rn] 6d2 7s2"<<"\n";
+       gotoxy(21,15);
+       cout<<"Electonegativity        :1.3"<<"\n";
+       gotoxy(30,20);
+       cout<<"Press Any Key To Return.....";
+}
+if(((i==28)||(i==29))&&(j==23))
+{
+ clrscr();
+       frame();
+       gotoxy(21,10);
+       cout<<"Atomic No.              :91"<<"\n";
+       gotoxy(21,11);
+       cout<<"Symbol                  :Pa"<<"\n";
+       gotoxy(21,12);
+       cout<<"Name                    :Protactinium"<<" \n";
+       gotoxy(21,13);
+       cout<<"Atomic weight           :231.03"<<"\n";
+       gotoxy(21,14);
+       cout<<"Atomic structure        :[Rn] 5f2 6d1 7s2"<<"\n";
+       gotoxy(21,15);
+       cout<<"Electonegativity        :1.5"<<"\n";
+       gotoxy(30,20);
+       cout<<"Press Any Key To Return.....";
+}
+if(((i==31)||(i==32))&&(j==23))
+{
+ clrscr();
+       frame();
+       gotoxy(21,10);
+       cout<<"Atomic No.              :92"<<"\n";
+       gotoxy(21,11);
+       cout<<"Symbol                  :U"<<"\n";
+       gotoxy(21,12);
+       cout<<"Name                    :Uranium"<<" \n";
+       gotoxy(21,13);
+       cout<<"Atomic weight           :238.02"<<"\n";
+       gotoxy(21,14);
+       cout<<"Atomic structure        :[Rn] 5f3 6d1 7s2"<<"\n";
+       gotoxy(21,15);
+       cout<<"Electonegativity        :1.38"<<"\n";
+       gotoxy(30,20);
+       cout<<"Press Any Key To Return.....";
+}
+if(((i==34)||(i==35))&&(j==23))
+{
+ clrscr();
+       frame();
+       gotoxy(21,10);
+       cout<<"Atomic No.              :93"<<"\n";
+       gotoxy(21,11);
+       cout<<"Symbol                  :Np"<<"\n";
+       gotoxy(21,12);
+       cout<<"Name                    :Neptunium"<<" \n";
+       gotoxy(21,13);
+       cout<<"Atomic weight           :237"<<"\n";
+       gotoxy(21,14);
+       cout<<"Atomic structure        :[Rn] 5f4 6d1 7s2"<<"\n";
+       gotoxy(21,15);
+       cout<<"Electonegativity        :1.36"<<"\n";
+       gotoxy(30,20);
+       cout<<"Press Any Key To Return.....";
+}
+if(((i==37)||(i==38))&&(j==23))
+{
+ clrscr();
+       frame();
+       gotoxy(21,10);
+       cout<<"Atomic No.              :94"<<"\n";
+       gotoxy(21,11);
+       cout<<"Symbol                  :Pu"<<"\n";
+       gotoxy(21,12);
+       cout<<"Name                    :Plutonium"<<" \n";
+       gotoxy(21,13);
+       cout<<"Atomic weight           :244"<<"\n";
+       gotoxy(21,14);
+       cout<<"Atomic structure        :[Rn] 5f6 7s2"<<"\n";
+       gotoxy(21,15);
+       cout<<"Electonegativity        :1.28"<<"\n";
+       gotoxy(30,20);
+       cout<<"Press Any Key To Return.....";
+}
+if(((i==40)||(i==41))&&(j==23))
+{
+ clrscr();
+       frame();
+       gotoxy(21,10);
+       cout<<"Atomic No.              :95"<<"\n";
+       gotoxy(21,11);
+       cout<<"Symbol                  :Am"<<"\n";
+       gotoxy(21,12);
+       cout<<"Name                    :Americium"<<" \n";
+       gotoxy(21,13);
+       cout<<"Atomic weight           :243"<<"\n";
+       gotoxy(21,14);
+       cout<<"Atomic structure        :[Rn] 5f7 7s2"<<"\n";
+       gotoxy(21,15);
+       cout<<"Electonegativity        :1.3"<<"\n";
+       gotoxy(30,20);
+       cout<<"Press Any Key To Return.....";
+}
+if(((i==43)||(i==44))&&(j==23))
+{
+ clrscr();
+       frame();
+       gotoxy(21,10);
+       cout<<"Atomic No.              :96"<<"\n";
+       gotoxy(21,11);
+       cout<<"Symbol                  :Cm"<<"\n";
+       gotoxy(21,12);
+       cout<<"Name                    :Curium"<<" \n";
+       gotoxy(21,13);
+       cout<<"Atomic weight           :247"<<"\n";
+       gotoxy(21,14);
+       cout<<"Atomic structure        :[Rn] 5f7 6d1 7s2"<<"\n";
+       gotoxy(21,15);
+       cout<<"Electonegativity        :1.3"<<"\n";
+       gotoxy(30,20);
+       cout<<"Press Any Key To Return.....";
+}
+if(((i==46)||(i==47))&&(j==23))
+{
+ clrscr();
+       frame();
+       gotoxy(21,10);
+       cout<<"Atomic No.              :97"<<"\n";
+       gotoxy(21,11);
+       cout<<"Symbol                  :Bk"<<"\n";
+       gotoxy(21,12);
+       cout<<"Name                    :Berkelium"<<" \n";
+       gotoxy(21,13);
+       cout<<"Atomic weight           :247"<<"\n";
+       gotoxy(21,14);
+       cout<<"Atomic structure        :[Rn] 5f9 7s2"<<"\n";
+       gotoxy(21,15);
+       cout<<"Electonegativity        :1.3"<<"\n";
+       gotoxy(30,20);
+       cout<<"Press Any Key To Return.....";
+}
+if(((i==49)||(i==50))&&(j==23))
+{
+ clrscr();
+       frame();
+       gotoxy(21,10);
+       cout<<"Atomic No.              :98"<<"\n";
+       gotoxy(21,11);
+       cout<<"Symbol                  :Cf"<<"\n";
+       gotoxy(21,12);
+       cout<<"Name                    :Californium"<<" \n";
+       gotoxy(21,13);
+       cout<<"Atomic weight           :251"<<"\n";
+       gotoxy(21,14);
+       cout<<"Atomic structure        :[Rn] 5f10 7s2"<<"\n";
+       gotoxy(21,15);
+       cout<<"Electonegativity        :1.3"<<"\n";
+       gotoxy(30,20);
+       cout<<"Press Any Key To Return.....";
+}
+if(((i==52)||(i==53))&&(j==23))
+{
+ clrscr();
+       frame();
+       gotoxy(21,10);
+       cout<<"Atomic No.              :99"<<"\n";
+       gotoxy(21,11);
+       cout<<"Symbol                  :Es"<<"\n";
+       gotoxy(21,12);
+       cout<<"Name                    :Einsteinium"<<" \n";
+       gotoxy(21,13);
+       cout<<"Atomic weight           :252"<<"\n";
+       gotoxy(21,14);
+       cout<<"Atomic structure        :[Rn] 5f11 7s2"<<"\n";
+       gotoxy(21,15);
+       cout<<"Electonegativity        :1.3"<<"\n";
+       gotoxy(30,20);
+       cout<<"Press Any Key To Return.....";
+}
+if(((i==55)||(i==56))&&(j==23))
+{
+ clrscr();
+       frame();
+       gotoxy(21,10);
+       cout<<"Atomic No.              :100"<<"\n";
+       gotoxy(21,11);
+       cout<<"Symbol                  :Fm"<<"\n";
+       gotoxy(21,12);
+       cout<<"Name                    :Fermium"<<" \n";
+       gotoxy(21,13);
+       cout<<"Atomic weight           :257"<<"\n";
+       gotoxy(21,14);
+       cout<<"Atomic structure        :[Rn] 5f12 7s2"<<"\n";
+       gotoxy(21,15);
+       cout<<"Electonegativity        :1.3"<<"\n";
+       gotoxy(30,20);
+       cout<<"Press Any Key To Return.....";
+}
+if(((i==58)||(i==59))&&(j==23))
+{
+ clrscr();
+       frame();
+       gotoxy(21,10);
+       cout<<"Atomic No.              :101"<<"\n";
+       gotoxy(21,11);
+       cout<<"Symbol                  :Md"<<"\n";
+       gotoxy(21,12);
+       cout<<"Name                    :Mendelevium"<<" \n";
+       gotoxy(21,13);
+       cout<<"Atomic weight           :258"<<"\n";
+       gotoxy(21,14);
+       cout<<"Atomic structure        :[Rn] 5f13 7s2"<<"\n";
+       gotoxy(21,15);
+       cout<<"Electonegativity        :1.3"<<"\n";
+       gotoxy(30,20); 
+       cout<<"Press Any Key To Return.....";
+}
+if(((i==61)||(i==62))&&(j==23))
+{
+ clrscr();
+       frame();
+       gotoxy(21,10);
+       cout<<"Atomic No.              :102"<<"\n";
+       gotoxy(21,11);
+       cout<<"Symbol                  :No"<<"\n";
+       gotoxy(21,12);
+       cout<<"Name                    :Nobelium"<<" \n";
+       gotoxy(21,13);
+       cout<<"Atomic weight           :259"<<"\n";
+       gotoxy(21,14);
+       cout<<"Atomic structure        :[Rn] 5f14 7s2"<<"\n";
+       gotoxy(21,15);
+       cout<<"Electonegativity        :1.3"<<"\n";
+       gotoxy(30,20);
+       cout<<"Press Any Key To Return.....";
+}
+if(((i==64)||(i==65))&&(j==23))
+{
+ clrscr();
+       frame();
+       gotoxy(21,10);
+       cout<<"Atomic No.              :103"<<"\n";
+       gotoxy(21,11);
+       cout<<"Symbol                  :Lr"<<"\n";
+       gotoxy(21,12);
+       cout<<"Name                    :Lawrencium"<<" \n";
+       gotoxy(21,13);
+       cout<<"Atomic weight           :262"<<"\n";
+       gotoxy(21,14);
+       cout<<"Atomic structure        :[Rn] 5f14 7s2 7p1"<<"\n";
+       gotoxy(21,15);
+       cout<<"Electonegativity        :1.3"<<"\n";
+       gotoxy(30,20);
+       cout<<"Press Any Key To Return.....";
+}
+if(((i==22)||(i==23))&&(j==17))
+{
+ clrscr();
+       frame();
+       gotoxy(21,10);
+       cout<<"Atomic No.              :104"<<"\n";
+       gotoxy(21,11);
+       cout<<"Symbol                  :Rf"<<"\n";
+       gotoxy(21,12);
+       cout<<"Name                    :Rutherfordium"<<" \n";
+       gotoxy(21,13);
+       cout<<"Atomic weight           :267"<<"\n";
+       gotoxy(21,14);
+       cout<<"Atomic structure        :[Rn] 5f14 6d2 7s2"<<"\n";
+       gotoxy(21,15);
+       cout<<"Electonegativity        :1.3"<<"\n";
+       gotoxy(30,20);
+       cout<<"Press Any Key To Return.....";
+}
+
+if(((i==25)||(i==26))&&(j==17))
+{
+ clrscr();
+       frame();
+       gotoxy(21,10);
+       cout<<"Atomic No.              :105"<<"\n";
+       gotoxy(21,11);
+       cout<<"Symbol                  :Db"<<"\n";
+       gotoxy(21,12);
+       cout<<"Name                    :Dubnium"<<" \n";
+       gotoxy(21,13);
+       cout<<"Atomic weight           :268"<<"\n";
+       gotoxy(21,14);
+       cout<<"Atomic structure        :[Rn] 5f14 6d2 7s2"<<"\n";
+       gotoxy(21,15);
+       cout<<"Electonegativity        :1.3"<<"\n";
+       gotoxy(30,20);
+       cout<<"Press Any Key To Return.....";
+}
+if(((i==28)||(i==29))&&(j==17))
+{
+ clrscr();
+       frame();
+       gotoxy(21,10);
+       cout<<"Atomic No.              :106"<<"\n";
+       gotoxy(21,11);
+       cout<<"Symbol                  :Sg"<<"\n";
+       gotoxy(21,12);
+       cout<<"Name                    :Seaborgium"<<" \n";
+       gotoxy(21,13);
+       cout<<"Atomic weight           :269"<<"\n";
+       gotoxy(21,14);
+       cout<<"Atomic structure        :[Rn] 5f14 6d3 7s2"<<"\n";
+       gotoxy(21,15);
+       cout<<"Electonegativity        :0"<<"\n";
+       gotoxy(30,20);
+       cout<<"Press Any Key To Return.....";
+}
+if(((i==31)||(i==32))&&(j==17))
+{
+ clrscr();
+       frame();
+       gotoxy(21,10);
+       cout<<"Atomic No.              :107"<<"\n";
+       gotoxy(21,11);
+       cout<<"Symbol                  :Bh"<<"\n";
+       gotoxy(21,12);
+       cout<<"Name                    :Bohrium"<<" \n";
+       gotoxy(21,13);
+       cout<<"Atomic weight           :270"<<"\n";
+       gotoxy(21,14);
+       cout<<"Atomic structure        :[Rn] 5f14 6d5 7s2"<<"\n";
+       gotoxy(21,15);
+       cout<<"Electonegativity        :0"<<"\n";
+       gotoxy(30,20);
+       cout<<"Press Any Key To Return.....";
+}
+if(((i==34)||(i==35))&&(j==17))
+{
+ clrscr();
+       frame();
+       gotoxy(21,10);
+       cout<<"Atomic No.              :108"<<"\n";
+       gotoxy(21,11);
+       cout<<"Symbol                  :Hs"<<"\n";
+       gotoxy(21,12);
+       cout<<"Name                    :Hassium"<<" \n";
+       gotoxy(21,13);
+       cout<<"Atomic weight           :269"<<"\n";
+       gotoxy(21,14);
+       cout<<"Atomic structure        :[Rn] 5f14 6d6 7s2"<<"\n";
+       gotoxy(21,15);
+       cout<<"Electonegativity        :0"<<"\n";
+       gotoxy(30,20);
+       cout<<"Press Any Key To Return.....";
+}
+if(((i==37)||(i==38))&&(j==17))
+{
+ clrscr();
+       frame();
+       gotoxy(21,10);
+       cout<<"Atomic No.              :109"<<"\n";
+       gotoxy(21,11);
+       cout<<"Symbol                  :Mt"<<"\n";
+       gotoxy(21,12);
+       cout<<"Name                    :Meitnerium"<<" \n";
+       gotoxy(21,13);
+       cout<<"Atomic weight           :278"<<"\n";
+       gotoxy(21,14);
+       cout<<"Atomic structure        :[Rn] 5f14 6d7 7s2"<<"\n";
+       gotoxy(21,15);
+       cout<<"Electonegativity        :0"<<"\n";
+       gotoxy(30,20);
+       cout<<"Press Any Key To Return.....";
+}
+if(((i==40)||(i==41))&&(j==17))
+{
+ clrscr();
+       frame();
+       gotoxy(21,10);
+       cout<<"Atomic No.              :110"<<"\n";
+       gotoxy(21,11);
+       cout<<"Symbol                  :Ds"<<"\n";
+       gotoxy(21,12);
+       cout<<"Name                    :Darmstadtium"<<" \n";
+       gotoxy(21,13);
+       cout<<"Atomic weight           :281"<<"\n";
+       gotoxy(21,14);
+       cout<<"Atomic structure        :[Rn] 5f14 6d8 7s2"<<"\n";
+       gotoxy(21,15);
+       cout<<"Electonegativity        :0"<<"\n";
+       gotoxy(30,20);
+       cout<<"Press Any Key To Return.....";
+}
+
+char key;
+key=getch();
+if(key==27) exit(0);
+else display();
+}
